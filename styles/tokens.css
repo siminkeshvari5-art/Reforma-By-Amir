@@ -1,0 +1,76 @@
+/* Reforma by Amir — design tokens
+   Source: assets/brand/visual-direction.md (VD) + participant resolutions in 07-website-structure.md */
+
+:root {
+  /* VD 03 Color System — explicit source colours */
+  --c-cream: #FFFDF7;      /* Primary, 60% — page ground (participant resolution) */
+  --c-navy: #000080;       /* Neutral, 30% — text and contrast bands */
+  --c-gold: #D4AF37;       /* Accent 01 — one moment per section; never text on cream */
+  --c-ink: #151E3F;        /* Accent 02 — footer only */
+  --c-steel: #ADB4BF;      /* Accent 03 — fine detail and states only */
+
+  /* Semantic roles — derived (see 09-build-notes.md) */
+  --c-raised: #F3F1EA;     /* derived cream tint for the raised surface */
+  --c-text: var(--c-navy);
+  --c-text-muted: #34347F; /* derived navy tint, 10.6:1 on cream, 9.6:1 on raised */
+  --c-on-dark: var(--c-cream);
+  --c-on-dark-muted: #D9D9EE; /* derived, 11.5:1 on navy */
+  --c-btn-label: #111111;  /* VD 03 primary button label */
+  --c-btn-hover: #E0DFD9;  /* VD 03 */
+  --c-btn-active: #CCCAC6; /* VD 03 */
+  --c-navy-hover: #1A1A8F;  /* derived hover for navy button */
+  --c-navy-active: #00006A; /* derived active for navy button */
+  --c-error: #9B1C1C;      /* derived, 8.0:1 on cream */
+  --c-error-on-dark: #FFC9C9;
+  --c-hairline-dark: rgba(255, 253, 247, 0.24);
+  --c-hairline-light: rgba(0, 0, 128, 0.16);
+
+  /* VD 02 Name & Typography — families are explicit; files not supplied, so the export's own fallback stacks apply */
+  --font-body: Nunito, "Trebuchet MS", Verdana, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --w-regular: 400;
+  --w-medium: 600;          /* explicit: regular and medium, no bold */
+
+  /* VD 02 system defaults — type scale */
+  --fs-1: clamp(13px, 0.8rem + 0.1vw, 14px);
+  --fs-2: clamp(17px, 1rem + 0.15vw, 18px);
+  --fs-3: clamp(20px, 1.1rem + 0.4vw, 24px);
+  --fs-4: clamp(22px, 1.2rem + 0.8vw, 30px);
+  --fs-5: clamp(30px, 1.4rem + 1.6vw, 44px);
+  --fs-6: clamp(40px, 6vw, 72px);
+  --lh-display: 1.05;
+  --lh-h2: 1.15;
+  --lh-h3: 1.25;
+  --lh-body: 1.55;
+  --lh-lead: 1.45;
+  --track-display: -0.02em;
+  --track-h2: -0.01em;
+
+  /* VD 04 Composition — system defaults */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+  --space-8: 128px;
+  --container: 1280px;
+  --margin: 24px;           /* mobile; 48px tablet; 80px desktop (set in layout.css) */
+  --measure: 68ch;
+
+  /* VD 07 Graphic Language + VD 03 buttons */
+  --radius: 999px;          /* derived: pill controls echo the level vial; same on every control */
+  --radius-field: 14px;     /* derived for multi-line fields */
+  --btn-h: 48px;
+  --focus-ring: 2px solid var(--c-gold);
+
+  /* VD 05 accordion motion — explicit */
+  --acc-expand: 250ms;
+  --acc-collapse: 250ms;
+  --acc-chevron: 250ms;
+  --acc-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Breakpoints (VD 04 defaults; literal values used in media queries):
+     mobile 390 · tablet 768 · desktop 1280 · wide 1600 · stack-to-1 below 480 */
+}
